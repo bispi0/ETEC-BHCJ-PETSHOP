@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<head>
+  <title>Pet Shop - Produtos</title>
+  <style>
+    body {
+        background-color: #f6d365;
+    }
+    .produtos-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .produto {
+      border: 1px solid #050505;
+      padding: 15px;
+      border-radius: 10px;
+      background-color: #f08a5d;
+      max-width: 300px;
+      width: 100%;
+    }
+
+    .produto img {
+      width: 150px;
+      height: auto;
+      border-radius: 8px;
+      display: block;
+      margin: 0 auto 10px;
+    }
+  </style>
+  <script>
+   
+   function adicionarAoCarrinho(nome, preco) {
+  var carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+
+  carrinho.push({ nome: nome, preco: preco });
+  localStorage.setItem("carrinho", JSON.stringify(carrinho));
+  
+  window.alert(nome + " foi adicionado ao carrinho!");
+}
+
+  </script>
+</head>
+
+<body>
+  <div style="text-align: center;">
+    <h1>Produtos para seu Pet</h1>
+    <button style="color: burlywood;"><a href="carrinho.petshop.html">Ver Carrinho <a></button>
+  </div>
+
+  <div class="produtos-container">
+
+    <div class="produto">
+      <img src="https://assets-bichofeliz.egondola.app/v1/pro_765_e.jpg" alt="Ração Premium">
+      <h3>Ração Premium - 10kg</h3>
+      <p>Ideal para cães adultos que desejam uma nutrição balanceada e muito saborosa.</p>
+      <p><strong>R$ 120,00</strong></p>
+      <button onclick="adicionarAoCarrinho('Ração Premium - 10kg', 120)">Adicionar ao carrinho</button>
+    </div>
+
+    <div class="produto">
+      <img src="https://cdn.awsli.com.br/600x450/1012/1012421/produto/230557591/az-147-ukpmb1qx6b.jpg" alt="Brinquedo de Borracha">
+      <h3>Brinquedo de Borracha</h3>
+      <p>Para diversão e saúde bucal do seu pet, ótimo e altamente resistente às mordidas de seu pet.</p>
+      <p><strong>R$ 25,00</strong></p>
+      <button onclick="adicionarAoCarrinho('Brinquedo de Borracha', 25)">Adicionar ao carrinho</button>
+    </div>
+
+    <div class="produto">
+      <img src="https://images.petz.com.br/fotos/1704733978180.jpg" alt="Bebedouro Fonte Spike Azul">
+      <h3>Bebedouro Fonte Spike Azul para Cães e Gatos</h3>
+      <p>Perfeito para a frequente hidratação de seu pet além de fornecer uma água totalmente limpa.</p>
+      <p><strong>R$ 70,00</strong></p>
+      <button onclick="adicionarAoCarrinho('Bebedouro Fonte', 70)">Adicionar ao carrinho</button>
+    </div>
+
+    <div class="produto">
+      <img src="https://minhacasapets.com.br/files/catalog/product/comedouro-duplo-morapet-madeira-1.jpeg" alt="Comedouro alto duplo de madeira">
+      <h3>Comedouro Alto Duplo de Madeira</h3>
+      <p>Ótimo para o melhor conforto possível de seu cachorro durante as refeições.</p>
+      <p><strong>R$ 55,00</strong></p>
+      <button onclick="adicionarAoCarrinho('Comedouro Alto Duplo', 55)">Adicionar ao carrinho</button>
+    </div>
+
+    <div class="produto">
+      <img src="https://images.tcdn.com.br/img/img_prod/606696/brinquedo_cachorro_osso_halteres_pata_macio_515_1_26b434a5e7144032f30e086ea3ececf3.jpg" alt="Brinquedo Osso Macio para Cachorro">
+      <h3>Brinquedo Osso Macio para Cachorro</h3>
+      <p>Divirta seu pet e cuide da saúde bucal com este osso macio e seguro, ideal para horas de brincadeira.</p>
+      <p><strong>R$ 25,00</strong></p>
+      <button onclick="adicionarAoCarrinho('Brinquedo Osso Macio', 25)">Adicionar ao carrinho</button>
+    </div>
+
+    <div class="produto">
+      <img src="https://cdn.awsli.com.br/2500x2500/2028/2028838/produto/2409988605e6cd7ee81.jpg" alt="Brinquedo Galinha de Borracha">
+      <h3>Brinquedo - Galinha de Borracha</h3>
+      <p>Proporcione diversão ao seu pet com essa galinha de borracha macia e resistente, ideal para brincadeiras e mordidas.
+      </p>
+      <p><strong>R$ 20,00</strong></p>
+      <button onclick="adicionarAoCarrinho('Brinquedo - Galinha de Borracha', 20)">Adicionar ao carrinho</button>
+    </div>
+
+    <div class="produto">
+      <img src="https://cdn.awsli.com.br/2500x2500/2587/2587855/produto/212132620/024-f6fuu05jhe.jpg" alt="Guia de Cachorro Azul - Tamanho Médio">
+      <h3>Guia de Cachorro Azul - Tamanho Médio</h3>
+      <p>Confortável e resistente, esta guia oferece segurança e controle durante os passeios com seu pet.</p>
+      <p><strong>R$ 35,00</strong></p>
+      <button onclick="adicionarAoCarrinho('Guia de Cachorro Azul', 35)">Adicionar ao carrinho</button>
+    </div>
+
+    <div class="produto">
+      <img src="https://gouppet.com.br/cdn/shop/products/Arn-s-de-c-o-personalizado-nenhuma-tra-o-reflexiva-respir-vel-ajust-vel-pet-arn-6.jpg?v=1657894858" alt="Peitoral de Cachorro Grande Porte">
+      <h3>Peitoral de Cachorro Grande Porte</h3>
+      <p> Confortável e ajustável, este peitoral oferece segurança e controle para cães de grande porte durante os passeios.</p>
+      <p><strong>R$ 35,00</strong></p>
+      <button onclick="adicionarAoCarrinho('Peitoral de Cachorro Grande Porte', 35)">Adicionar ao carrinho</button>
+    </div>
+  </div>
+</body>
+</html>
