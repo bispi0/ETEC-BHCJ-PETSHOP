@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PET Amigo - Página Inicial</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9; /* Fundo mais neutro */
+            color: #333;
+        }
+
+        header {
+            background-color: #f08a5d; /* Laranja forte */
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        header img {
+            width: 150px;
+        }
+
+        nav {
+            background-color: #f6c152; /* Amarelo vibrante */
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .banner {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .banner img {
+            width: 100%;
+            max-width: 1000px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            padding: 50px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .section h2 {
+            font-size: 32px;
+            color: #f08a5d; /* Laranja para o título */
+            margin-bottom: 20px;
+        }
+
+        .category {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+
+        .category div {
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 30%;
+        }
+
+        .category div img {
+            width: 80%;
+            border-radius: 8px;
+        }
+
+        .btn {
+            margin-top: 15px;
+            background-color: #f08a5d; /* Laranja para o botão */
+            color: white;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background-color: #f6c152; /* Amarelo claro para o efeito hover */
+        }
+
+        footer {
+            background-color: #f08a5d; /* Laranja para o rodapé */
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="https://via.placeholder.com/150" alt="Logo PET Amigo">
+        <h1>Bem-vindo ao PET Amigo</h1>
+    </header>
+
+    <nav>
+        <a href="inicial.html">Início</a>
+        <a href="produto.html">Produtos</a>
+        <a href="carrinho.html">Carrinho</a>
+        <a href="#">Serviços</a>
+        <a href="#">Agendamentos</a>
+    </nav>
+
+    <div class="banner">
+        <img src="https://via.placeholder.com/1000x400/00BFFF/FFFFFF?text=Seus+animais+de+estimação+merecem+o+melhor!" alt="Banner Principal">
+    </div>
+
+    <div class="section">
+        <h2>Explore Nossas Categorias</h2>
+        <div class="category">
+            <div>
+                <img src="https://via.placeholder.com/200" alt="Alimentos para Animais">
+                <h3>Alimentos</h3>
+                <button class="btn" onclick="window.location.href='https://www.petz.com.br/produtos'">Ver Produtos</button>
+            </div>
+            <div>
+                <img src="https://via.placeholder.com/200" alt="Acessórios para Animais">
+                <h3>Acessórios</h3>
+                <button class="btn" onclick="window.location.href='https://www.petz.com.br/produtos'">Ver Acessórios</button>
+            </div>
+            <div>
+                <img src="https://via.placeholder.com/200" alt="Cuidados e Higiene">
+                <h3>Cuidados</h3>
+                <button class="btn" onclick="window.location.href='https://www.petz.com.br/servicos'">Ver Cuidados</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 PET Amigo - Todos os direitos reservados.
+    </footer>
+
+</body>
+</html>
