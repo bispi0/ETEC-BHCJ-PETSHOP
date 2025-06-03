@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head>
+  <title>Carrinho de Compras - Pet Shop</title>
+  <style>
+    body {
+        background-color: #f6d365;
+    }
+    header {
+      text-align: center;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+    }
+    .carrinho {
+      width: 70%;
+      background-color: #f08a5d;
+      padding: 20px;
+      border-radius: 5px;
+    }
+    .total {
+      text-align: center;
+    }
+  </style>
+<script>
+  window.onload = function () {
+    const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+    const carrinhoContainer = document.getElementById("itensCarrinho");
+    const totalDiv = document.getElementById("total");
+
+    let total = 0;
+
+    for (const item of carrinho) {
+      carrinhoContainer.innerHTML += `<div><strong>${item.nome}</strong> - R$ ${item.preco.toFixed(2)}</div>`;
+      total += item.preco;
+    }
+
+    totalDiv.innerHTML = `<h3>Total: R$ ${total.toFixed(2)}</h3>`;
+  };
+</script>
+</head>
+<body>
+
+<header>
+  <h1>Pet Shop Online</h1>
+</header>
+
+<div class="container">
+  <div class="carrinho">
+    <h3>Seu Carrinho</h3>
+    <div id="itensCarrinho"></div>
+    <div class="total" id="total"></div>
+    <button id="limparCarrinho">Limpar Carrinho</button>
+    <button style="color: burlywood;"><a href="produtos.petshop.html">Ver Produtos<a></button>
+  </div>
+</div>
+<script>
+           document.getElementById("limparCarrinho").onclick = function() {
+        localStorage.removeItem("carrinho");
+        carrinhoContainer.innerHTML = "";
+        document.getElementById("total").innerHTML = "Total: R$ 0.00";
+      };
+    
+    </script>
+    
+</body>
+</html>
