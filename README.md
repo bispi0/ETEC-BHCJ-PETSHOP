@@ -1,2 +1,2 @@
-# ETEC-BHCJ-PETSHOP
+# ETEC-slaaaa
 Trabalho d4 sobre petshop
